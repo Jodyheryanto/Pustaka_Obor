@@ -1,0 +1,47 @@
+INSERT INTO `tb_kategori` (`id_kategori`, `nama`, `created_at`, `updated_at`) VALUES
+(1, 'Literasi', NULL, NULL);
+
+INSERT INTO `tb_lokasi` (`id_lokasi`, `nm_lokasi`, `tb_kota_id`, `tb_kecamatan_id`, `tb_kelurahan_id`, `kode_pos`, `alamat`, `created_at`, `updated_at`) VALUES
+(1, 'Obor Pusat', '1101', '1101021', '1101021001', 12345, 'Jl. Test', NULL, NULL);
+
+INSERT INTO `tb_pengarang` (`id_pengarang`, `NPWP`, `NIK`, `nm_pengarang`, `email`, `telepon`, `tb_negara_id`, `tb_kota_id`, `tb_kecamatan_id`, `tb_kelurahan_id`, `kode_pos`, `alamat`, `nama_rekening`, `bank_rekening`, `nomor_rekening`, `created_at`, `updated_at`) VALUES
+(1, NULL, '4028288282882828', 'Sukiwo Tejo', 'sukiwotejo@gmail.com', '08941838388', 101, '1103', '1103012', '1103012004', 12345, 'Jl. Test', 'Jody', 'BNI', '234455', NULL, NULL);
+
+INSERT INTO `tb_distributor` (`id_distributor`, `NPWP`, `nm_distributor`, `email`, `telepon`, `tb_kota_id`, `tb_kecamatan_id`, `tb_kelurahan_id`, `kode_pos`, `alamat`, `created_at`, `updated_at`) VALUES
+(1, '2813818318381838', 'Editira', 'editira@gmail.com', '0893848488484', '1102', '1102020', '1102020009', 12345, 'Jl. Test', NULL, NULL);
+
+INSERT INTO `tb_penerbit` (`id_penerbit`, `NPWP`, `nm_penerbit`, `email`, `telepon`, `tb_kota_id`, `tb_kecamatan_id`, `tb_kelurahan_id`, `kode_pos`, `alamat`, `created_at`, `updated_at`) VALUES
+(1, '238183813818381318', 'Informatika', 'informatika@gmail.com', '0895148488489', '1102', '1102020', '1102020010', 12345, 'Jl. Test', NULL, NULL);
+
+INSERT INTO `tb_induk_buku` (`kode_buku`, `isbn`, `tb_kategori_id`, `tb_pengarang_id`, `tb_penerbit_id`, `tb_distributor_id`, `tb_penerjemah_id`, `judul_buku`, `tahun_terbit`, `harga_jual`, `deskripsi_buku`, `cover`, `link_cover`, `berat`, `is_obral`, `created_at`, `updated_at`) VALUES
+('WPP20200202', '2737137173178313818', 1, 1, 1, 1, NULL, 'Mencabut Padi dari Akarnya', 2019, 75000, 'Ini deskripsi data buku', 'f6pEE33AfPW29wJyWu07yiTZGjwTIqsh191xtAz3.png', 'http://localhost:8000/storage/f6pEE33AfPW29wJyWu07yiTZGjwTIqsh191xtAz3.png', 400, 0, NULL, NULL),
+('WR00022', NULL, 1, 1, 1, 1, NULL, 'Si Anak Kingkong', 2020, 50000, 'Ini deskripsi buku saat ini', 'bfeZnNDm0pTuzZH32sJ22Rb2GfRFjyLDjFsQL6Af.jpeg', 'http://localhost:8000/storage/bfeZnNDm0pTuzZH32sJ22Rb2GfRFjyLDjFsQL6Af.jpeg', 500, 0, NULL, NULL);
+
+INSERT INTO `tb_stock` (`tb_induk_buku_kode_buku`, `tb_lokasi_id`, `qty`, `created_at`, `updated_at`) VALUES
+('WR00022', 1, 50, NULL, '2021-02-26 08:02:44'),
+('WPP20200202', 1, 100, NULL, '2021-02-27 21:20:47');
+
+
+
+INSERT INTO tb_kategori (id_kategori, nama, created_at, updated_at) VALUES
+(1, 'Literasi', NULL, NULL);
+
+INSERT INTO tb_lokasi (id_lokasi, nm_lokasi, tb_kota_id, tb_kecamatan_id, tb_kelurahan_id, kode_pos, alamat, created_at, updated_at) VALUES
+(1, 'Obor Pusat', '1101', '1101021', '1101021001', 12345, 'Jl. Test', NULL, NULL);
+
+INSERT INTO tb_pengarang (id_pengarang, "NPWP", "NIK", nm_pengarang, email, telepon, tb_negara_id, tb_kota_id, tb_kecamatan_id, tb_kelurahan_id, kode_pos, alamat, nama_rekening, bank_rekening, nomor_rekening, created_at, updated_at) VALUES
+(1, NULL, '4028288282882828', 'Sukiwo Tejo', 'sukiwotejo@gmail.com', '08941838388', 101, '1103', '1103012', '1103012004', 12345, 'Jl. Test', 'Jody', 'BNI', '234455', NULL, NULL);
+
+INSERT INTO tb_distributor (id_distributor, "NPWP", nm_distributor, email, telepon, tb_kota_id, tb_kecamatan_id, tb_kelurahan_id, kode_pos, alamat, created_at, updated_at) VALUES
+(1, '2813818318381838', 'Editira', 'editira@gmail.com', '0893848488484', '1102', '1102020', '1102020009', 12345, 'Jl. Test', NULL, NULL);
+
+INSERT INTO tb_penerbit (id_penerbit, "NPWP", nm_penerbit, email, telepon, tb_kota_id, tb_kecamatan_id, tb_kelurahan_id, kode_pos, alamat, created_at, updated_at) VALUES
+(1, '238183813818381318', 'Informatika', 'informatika@gmail.com', '0895148488489', '1102', '1102020', '1102020010', 12345, 'Jl. Test', NULL, NULL);
+
+INSERT INTO tb_induk_buku (kode_buku, isbn, tb_kategori_id, tb_pengarang_id, tb_penerbit_id, tb_distributor_id, tb_penerjemah_id, judul_buku, tahun_terbit, harga_jual, deskripsi_buku, cover, link_cover, created_at, updated_at) VALUES
+('WPP20200202', '2737137173178313818', 1, 1, 1, 1, NULL, 'Mencabut Padi dari Akarnya', 2019, 75000, 'Ini deskripsi data buku', 'f6pEE33AfPW29wJyWu07yiTZGjwTIqsh191xtAz3.png', 'http://localhost:8000/storage/f6pEE33AfPW29wJyWu07yiTZGjwTIqsh191xtAz3.png', NULL, NULL),
+('WR00022', NULL, 1, 1, 1, 1, NULL, 'Si Anak Kingkong', 2020, 50000, 'Ini deskripsi buku saat ini', 'bfeZnNDm0pTuzZH32sJ22Rb2GfRFjyLDjFsQL6Af.jpeg', 'http://localhost:8000/storage/bfeZnNDm0pTuzZH32sJ22Rb2GfRFjyLDjFsQL6Af.jpeg', NULL, NULL);
+
+INSERT INTO tb_stock (tb_induk_buku_kode_buku, tb_lokasi_id, qty, created_at, updated_at) VALUES
+('WR00022', 1, 50, NULL, '2021-02-26 08:02:44'),
+('WPP20200202', 1, 100, NULL, '2021-02-27 21:20:47');
